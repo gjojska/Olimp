@@ -1,0 +1,115 @@
+  :root {
+    --bg-color: #faf9f7;       /* тёплый почти белый */
+    --text-color: #3a3a3d;     /* глубокий серый, не чёрный */
+    --accent-color: #8b7a65;   /* приглушённый пыльно-коричневый */
+    --border-color: rgba(139, 122, 101, 0.3);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Georgia, Cambria, serif; /* тёплый, спокойный шрифт */
+    line-height: 1.6;
+  }
+
+  header {
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--accent-color);
+  }
+
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  article {
+    /* лёгкая визуальная изоляция статей без ярких рамок */
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  article:last-child {
+    border-bottom: none;
+  }
+
+  .btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(139, 122, 101, 0.2);
+    margin-top: 40px;
+    color: #777;
+  }
+.small-img {
+  width: 200px;           /* маленькая фиксированная ширина */
+  height: auto;           /* высота подстроится, пропорции не исказятся */
+  margin-bottom: 15px;   /* небольшой отступ снизу */
+  border-radius: 4px;    /* чуть-чуть скруглить углы */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06); /* очень лёгкая тень */
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .small-img {
+    width: 100%;
+    max-width: 240px;     /* на телефоне не больше 240 px */
+  }
+}
